@@ -1,3 +1,3 @@
 # HelloWorldMoneyTracker
 Our first simple android app
-![alt text](https://github.com/netimen/HelloWorldMoneyTracker/blob/master/design.jpg |width=400)
+<img src="https://github.com/netimen/HelloWorldMoneyTracker/blob/master/design.jpg" align="left" height="400" >
