@@ -1,6 +1,7 @@
 package com.loftschool.moneytracker;
 
 import android.os.Bundle;
+import android.renderscript.Script;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,16 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.IgnoreExtraProperties;
+import com.google.firebase.database.Query;
+
+import java.io.Serializable;
+
 /**
  * Copyright (c) 2017.
  * All Rights Reserved.
@@ -21,9 +32,13 @@ import android.widget.TextView;
  */
 
 public class MainActivity extends AppCompatActivity {
-    static class Item {
-        String name;
-        int price;
+    @IgnoreExtraProperties
+    static class Item implements Serializable{
+       public String name;
+       public int price;
+
+        public Item() {
+        }
 
         Item(String name, int price) {
             this.name = name;
@@ -31,21 +46,58 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private FirebaseDatabase database;
+    private DatabaseReference myRef;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        database= FirebaseDatabase.getInstance();
+        database.setPersistenceEnabled(true);
+
+        myRef = database.getReference("items").child("users").child("newUser");
         final EditText name = (EditText) findViewById(R.id.name);
         final EditText price = (EditText) findViewById(R.id.price);
         final Button add = (Button) findViewById(R.id.add);
         final ListView items = (ListView) findViewById(R.id.items);
         final ItemsAdapter adapter = new ItemsAdapter();
-
+myRef.removeValue();
         items.setAdapter(adapter);
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                adapter.add(new Item(name.getText().toString(), Integer.valueOf(price.getText().toString())));
+                Item item = new Item(name.getText().toString(), Integer.valueOf(price.getText().toString()));
+             //   adapter.add(item);
+                myRef.push().setValue(item);
+            }
+        });
+        Query myQuery = myRef.orderByChild("price").equalTo(111);
+        myQuery.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                Item item = dataSnapshot.getValue(Item.class);
+                adapter.add(item);
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
             }
         });
     }
