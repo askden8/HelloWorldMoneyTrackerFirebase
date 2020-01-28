@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="appstore.app.description"></string>
+  <string name="index.untranslated_yet"></string>
+  <string name="index.placeholder"></string>
+  <string name="appstore.app.title"></string>
+  <string name="appstore.app.keywords"></string>
+  <string name="index.blabla"></string>
+  <string name="main.cool"></string>
+  <string name="app.login.pass">הסיסמה</string>
+  <string name="appstore.app.whatsnew"></string>
+  <plurals name="app.users.active">
+    <item quantity="one"></item>
+    <item quantity="two"></item>
+    <item quantity="many"></item>
+    <item quantity="other"></item>
+  </plurals>
+  <string name="main.country">בחר מדינה</string>
+  <string name="index.welcome"></string>
+</resources>
