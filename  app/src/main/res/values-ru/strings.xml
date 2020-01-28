@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="appstore.app.description">Lokalise – это бесплатный сервис, который позволяет управлять и редактировать строки и переводы вашего приложения, игры или веб-сайта – как в одиночку, так и с командой участников. Lokalise сделан для разработчиков, и включает такие оригинальные возможности, как веб-хуки при экспорте, настраиваемую структуру архивов для автоматической интеграции с вашим сервисом и многое другое.</string>
+  <string name="index.untranslated_yet"></string>
+  <string name="index.placeholder">В редакторе есть проверки, которые применяются для каждой строки, которая сохраняется. Попробуем перевести эту строку без плейсхолдера.</string>
+  <string name="appstore.app.title">Lokalise</string>
+  <string name="appstore.app.keywords"></string>
+  <string name="index.blabla"></string>
+  <string name="main.cool">Этот ключ из семейства iOS, но вы можете спарить его и с другими платформами одним нажатием кнопки!</string>
+  <string name="app.login.pass"></string>
+  <string name="appstore.app.whatsnew">- всякое разное</string>
+  <plurals name="app.users.active">
+    <item quantity="one"></item>
+    <item quantity="few"></item>
+    <item quantity="many"></item>
+    <item quantity="other"></item>
+  </plurals>
+  <string name="main.country"></string>
+  <string name="index.welcome">Добро пожаловать в Lokalise! 
+Попробуйте нажать любой перевод с пометкой \"Empty\", чтобы увидеть предложенный машинный перевод.</string>
+</resources>

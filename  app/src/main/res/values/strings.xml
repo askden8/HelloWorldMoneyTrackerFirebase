@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="appstore.app.description">Lokalise is a free service, that lets you manage and edit strings and translations of your app, game or website – either on your own or with a team of collaborators. Built for developers, Lokalise includes original features like export webhooks and custom archive bundle structure, so you can easily integrate it with your website or app and update translations in real time.</string>
+  <string name="index.untranslated_yet"></string>
+  <string name="index.placeholder">The editor has validations that are applied for every string that is saved. Try to translate this string without the %s placeholder and you will see.</string>
+  <string name="appstore.app.title">Lokalise</string>
+  <string name="appstore.app.keywords">app localization, ios localization, string management, app translation management tool, android localisation</string>
+  <string name="index.blabla">If you have translated all the previous strings so far, it should be enough to give you an idea on how the editor works. Right? :)</string>
+  <string name="main.cool">This string belongs to iOS, however you can link other platforms with a single click!</string>
+  <string name="app.login.pass">Password</string>
+  <string name="appstore.app.whatsnew">- added support for many languages
+- now much cooler than before
+- the best translation management tool on the market</string>
+  <plurals name="app.users.active">
+    <item quantity="one">Just one user online</item>
+    <item quantity="other">There are %d users online</item>
+  </plurals>
+  <string name="main.country">Select country</string>
+  <string name="index.welcome"><![CDATA[Welcome to <strong>Lokalise</strong>! 
+Try to click any <i>Empty</i> translation to see inline machine translation.]]></string>
+</resources>
