@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="appstore.app.description"></string>
+  <string name="index.untranslated_yet"></string>
+  <string name="index.placeholder">L\'éditeur a validations qui sont appliqués pour chaque chaîne de caractères qui est enregistré. Essayez de traduire cette chaîne sans le %s espace réservé et vous verrez.</string>
+  <string name="appstore.app.title"></string>
+  <string name="appstore.app.keywords"></string>
+  <string name="index.blabla"></string>
+  <string name="main.cool"></string>
+  <string name="app.login.pass"></string>
+  <string name="appstore.app.whatsnew"></string>
+  <plurals name="app.users.active">
+    <item quantity="one"></item>
+    <item quantity="other"></item>
+  </plurals>
+  <string name="main.country">Sélectionnez un pays</string>
+  <string name="index.welcome"></string>
+</resources>
